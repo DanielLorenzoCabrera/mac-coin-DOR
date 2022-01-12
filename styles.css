@@ -94,7 +94,7 @@ nav > article{
     background-color: #f6f6f6;
     border-radius: .2em;
     margin: 0 .5em;
-    transition: all .5s;
+    transition: all .3s;
 }
 
 nav > article:hover{
@@ -107,13 +107,13 @@ nav > article:hover{
 nav > article:hover + article{
     transform: scale(1.50) translate(0,-10px);
     margin: 0 1em;
-    transition: all .5s .05s;
+    transition: all .3s .05s;
 }
 
 article:hover +article +article{
     transform: scale(1.25) translate(0,-10px);
     margin: 0 1em;
-    transition: all .5s .08s;
+    transition: all .3s .08s;
 }
 
 
