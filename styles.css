@@ -1,0 +1,158 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
+
+
+
+:root{
+    --item-size: 50px;
+}
+
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+.wrapper{
+    display: grid;
+    height: 100vh;
+    background-color: red;
+    grid-template-rows: repeat(30,1fr);
+    background-image: url("src/background.jpg");
+    background-size: cover;
+}
+
+
+header{
+    display: flex;
+    background-color: #f6f6f6;
+    align-items: center;
+}
+
+header figure{
+    margin: 0 1em;
+   
+}
+
+header img{
+    max-width: 20px;
+}
+
+
+header p{
+    margin: 0 .8em;
+    font-family: 'Roboto', sans-serif;
+}
+
+header p:first-of-type{
+    font-weight: bolder;
+}
+
+footer{
+    
+    grid-row: 26/-1;
+    display: flex;
+    justify-content: rgba();
+    justify-content: center;
+    align-items: center;
+    padding: 1em;
+    position: relative;
+   
+}
+
+footer:hover nav{
+    transform: translate(0px) scale(1);
+    transition: all .6s ;
+}
+
+nav{
+    display: flex;
+    background-color: rgba(246,246,246,.6);
+    border-radius: .2em;
+    padding: .5em 1em;
+    transform: translate(0,100px) scale(.5);
+    transition: all .6s;
+}
+
+nav > article{
+    width: var(--item-size);
+    height: var(--item-size);
+    background-color: #f6f6f6;
+    border-radius: .2em;
+    margin: 0 .5em;
+    transition: all .5s;
+}
+
+nav > article:hover{
+    transform: scale(2) translate(0,-10px);
+    margin: 0 2em;
+    cursor: pointer;
+}
+
+
+nav > article:hover + article{
+    transform: scale(1.50) translate(0,-10px);
+    margin: 0 1em;
+    transition: all .5s .05s;
+}
+
+article:hover +article +article{
+    transform: scale(1.25) translate(0,-10px);
+    margin: 0 1em;
+    transition: all .5s .08s;
+}
+
+
+#item1 {
+    background-image: url("src/1.png");
+    background-size: cover;
+}
+
+#item2{
+    background-image: url("src/2.png");
+    background-size: cover;
+}
+
+#item3{
+    background-image: url("src/3.png");
+    background-size: cover;
+}
+
+#item4{
+    background-image: url("src/4.png");
+    background-size: cover;
+}
+
+#item5{
+    background-image: url("src/5.png");
+    background-size: cover;
+}
+
+#item6{
+    background-image: url("src/6.png");
+    background-size: cover;
+}
+
+#item7{
+    background-image: url("src/7.png");
+    background-size: cover;
+    filter:hue-rotate(190deg)
+}
+
+#item8{
+    background-image: url("src/8.png");
+    background-size: cover;
+}
+
+#item9{
+    background-image: url("src/9.png");
+    background-size: cover;
+}
+
+#item10{
+    background-image: url("src/10.png");
+    background-size: cover;
+}
