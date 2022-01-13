@@ -24,8 +24,13 @@ main{
     justify-content: center;
 }
 
+main > *{
+    margin: 1em 0;
+}
 
-h1{
+
+p{
+    font-size: 2em;
     font-family: 'Staatliches', cursive;
     text-align: center;
     margin: 1em  auto ;
@@ -41,7 +46,10 @@ h1{
     background-color: var(--coin-color);
     background-image: url('src/bitcoin.webp');
     border-radius: 50%;
-    animation: flipx 2s linear 0s infinite normal backwards  ;
+    /*animation: cha 3s linear 0s infinite normal forwards;*/
+    animation: changeBack .3s linear 0s infinite normal forwards,
+                move .3s linear 0s infinite normal backwards,
+                shadow .15s ease-in-out 0s infinite normal forwards;
     position: relative;
 }
 
@@ -58,63 +66,25 @@ h1{
 }
 
 
-@keyframes flip{
-    0%{
-
-        background-size: cover;
-        
-    }
-    25%{
-        box-shadow: 15px 0 0 var(--edge-color);
-        
-    }
-
-    48%{
-        background-image: url('src/bitcoin.webp');
-
-    }
-    50%{
-        transform: rotateY(90deg);
-        box-shadow: 0 0 0 black;
-        background-size: cover;
-        background-image: url('src/lightning.webp');
-    }
-
-    75%{
-        transition: all .1s;
-        box-shadow: 15px 0 0 var(--edge-color);
-    }
-
-    99%{
-        background-image: url('src/lightning.webp');
-    }
-    100%{
-        transform: rotateY(180deg);
-        background-image: url('src/bitcoin.webp');
-    }
-}
-
-
-@keyframes flipx{
+@keyframes changeBack{
     0%{
         background-image: url('src/bitcoin.webp');
         background-size: cover;
-        box-shadow: 15px 0 0 #000;
     }
+    
     25%{
-        transform: rotateY(90deg);
         background-image: url('src/bitcoin.webp');
-        box-shadow: 0 0 0 #000;
     }
     26%{
         background-image: url('src/lightning.webp');
 
     }
+    
     50%{
         background-image: url('src/lightning.webp');
-        transform: rotateY(180deg);
         background-size: cover;
     }
+
     75%{
         background-image: url('src/lightning.webp');
 
@@ -128,3 +98,33 @@ h1{
         background-size: cover;
     }
 }
+
+@keyframes move{
+    0%{
+        transform: rotateY(0deg);
+    }
+    100%{
+        transform: rotateY(360deg);
+        box-shadow: 0 0 0 0 #000;
+    }
+}
+
+
+@keyframes shadow{
+    0%{
+        box-shadow: 0 0 0 0 #000;
+    }
+    50%{
+        box-shadow: 15px 0 0 0 #000;
+      
+
+    }
+}
+
+
+
+.coin:nth-of-type(2){
+    filter: hue-rotate(200deg);
+}
+
+
