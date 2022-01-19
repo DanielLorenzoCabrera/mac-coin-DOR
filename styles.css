@@ -104,17 +104,20 @@ nav > article:hover{
 }
 
 
-nav > article:hover + article{
+nav > article:hover + article, .oneBef{
     transform: scale(1.50) translate(0,-10px);
     margin: 0 1em;
     transition: all .3s .05s;
 }
 
-article:hover +article +article{
+article:hover +article +article, .twoBef{
     transform: scale(1.25) translate(0,-10px);
     margin: 0 1em;
     transition: all .3s .08s;
 }
+
+
+
 
 
 #item1 {
